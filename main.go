@@ -17,5 +17,5 @@ func C_GetFunctionList(ppFunctionList C.CK_FUNCTION_LIST_PTR_PTR) C.CK_RV {
 
 	*ppFunctionList = &functionList
 
-	return 0
+	return C.CK_OK
 }

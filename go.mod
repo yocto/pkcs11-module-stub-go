@@ -1,3 +1,3 @@
 module yocto/pkcs11-stub
 
-go 1.23
+go 1.20
