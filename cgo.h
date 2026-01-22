@@ -1,6 +1,3 @@
-package main
-
-/*
 #ifndef PKCS11_H
 #define PKCS11_H
 
@@ -16,5 +13,3 @@ package main
 #include<include/pkcs11.h>
 
 #endif
-*/
-import "C"

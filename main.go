@@ -1,5 +1,7 @@
 package main
 
+// #include "cgo.h"
+import "C"
 import "fmt"
 
 var functionList = C.CK_FUNCTION_LIST{}
@@ -17,5 +19,5 @@ func C_GetFunctionList(ppFunctionList C.CK_FUNCTION_LIST_PTR_PTR) C.CK_RV {
 
 	*ppFunctionList = &functionList
 
-	return C.CK_OK
+	return C.CKR_OK
 }
