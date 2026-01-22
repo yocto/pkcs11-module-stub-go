@@ -149,5 +149,15 @@ func C_GetFunctionList(ppFunctionList C.CK_FUNCTION_LIST_PTR_PTR) C.CK_RV {
 //export C_VerifyRecover
 //export C_VerifyRecoverInit
 //export C_VerifyUpdate
+
 //export C_WaitForSlotEvent
+func C_WaitForSlotEvent(flags C.CK_FLAGS, pSlot C.CK_SLOT_ID_PTR, pReserved C.CK_VOID_PTR) C.CK_RV { // Since v2.1
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_WrapKey
+func C_WrapKey(hSession C.CK_SESSION_HANDLE, pMechanism C.CK_MECHANISM_PTR, hWrappingKey C.CK_OBJECT_HANDLE, hKey C.CK_OBJECT_HANDLE, pWrappedKey C.CK_BYTE_PTR, pusWrappedKeyLen C.CK_USHORT_PTR) C.CK_RV { // Since v1.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
