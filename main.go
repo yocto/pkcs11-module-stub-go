@@ -287,19 +287,19 @@ func C_Initialize(pInitArgs C.CK_VOID_PTR /*pReserved C.CK_VOID_PTR (v1.0,v2.0)*
 }
 
 //export C_InitPIN
-func C_InitPIN(hSession C.CK_SESSION_HANDLE, pPin C.CK_CHAR_PTR, ulPinLen C.CK_ULONG /*usPinLen C.CK_USHORT (v1.0)*/) C.CK_RV { // Since v1.0
+func C_InitPIN(hSession C.CK_SESSION_HANDLE, pPin CK_UTF8CHAR_PTR /*pPin C.CK_CHAR_PTR (v1.0,v2.0,v2.01,v2.10)*/, ulPinLen C.CK_ULONG /*usPinLen C.CK_USHORT (v1.0)*/) C.CK_RV { // Since v1.0
 	// TODO
 	return C.CKR_FUNCTION_NOT_SUPPORTED
 }
 
 //export C_InitToken
-func C_InitToken(slotID C.CK_SLOT_ID, pPin C.CK_CHAR_PTR, ulPinLen C.CK_ULONG /*usPinLen C.CK_USHORT (v1.0)*/, pLabel C.CK_CHAR_PTR) C.CK_RV { // Since v1.0
+func C_InitToken(slotID C.CK_SLOT_ID, pPin CK_UTF8CHAR_PTR /*pPin C.CK_CHAR_PTR (v1.0,v2.0,v2.01,v2.10)*/, ulPinLen C.CK_ULONG /*usPinLen C.CK_USHORT (v1.0)*/, pLabel CK_UTF8CHAR_PTR /*pLabel C.CK_CHAR_PTR (v1.0,v2.0,v2.01,v2.10)*/) C.CK_RV { // Since v1.0
 	// TODO
 	return C.CKR_FUNCTION_NOT_SUPPORTED
 }
 
 //export C_Login
-func C_Login(hSession C.CK_SESSION_HANDLE, userType C.CK_USER_TYPE, pPin C.CK_CHAR_PTR, ulPinLen C.CK_ULONG /*usPinLen C.CK_USHORT (v1.0)*/) C.CK_RV { // Since v1.0
+func C_Login(hSession C.CK_SESSION_HANDLE, userType C.CK_USER_TYPE, pPin CK_UTF8CHAR_PTR /*pPin C.CK_CHAR_PTR (v1.0,v2.0,v2.01,v2.10)*/, ulPinLen C.CK_ULONG /*usPinLen C.CK_USHORT (v1.0)*/) C.CK_RV { // Since v1.0
 	// TODO
 	return C.CKR_FUNCTION_NOT_SUPPORTED
 }
@@ -348,7 +348,7 @@ func C_SetOperationState(hSession C.CK_SESSION_HANDLE, pOperationState C.CK_BYTE
 }
 
 //export C_SetPIN
-func C_SetPIN(hSession C.CK_SESSION_HANDLE, pOldPin C.CK_CHAR_PTR, ulOldLen C.CK_ULONG /*usOldLen C.CK_USHORT (v1.0)*/, pNewPin C.CK_CHAR_PTR, ulNewLen C.CK_ULONG /*usNewLen C.CK_USHORT (v1.0)*/) C.CK_RV { // Since v1.0
+func C_SetPIN(hSession C.CK_SESSION_HANDLE, pOldPin CK_UTF8CHAR_PTR /*pOldPin C.CK_CHAR_PTR (v1.0,v2.0,v2.01,v2.10)*/, ulOldLen C.CK_ULONG /*usOldLen C.CK_USHORT (v1.0)*/, pNewPin CK_UTF8CHAR_PTR /*pNewPin C.CK_CHAR_PTR (v1.0,v2.0,v2.01,v2.10)*/, ulNewLen C.CK_ULONG /*usNewLen C.CK_USHORT (v1.0)*/) C.CK_RV { // Since v1.0
 	// TODO
 	return C.CKR_FUNCTION_NOT_SUPPORTED
 }
