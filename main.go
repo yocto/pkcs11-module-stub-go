@@ -10,7 +10,7 @@ func main() {}
 
 //export C_GetFunctionList
 func C_GetFunctionList(ppFunctionList C.CK_FUNCTION_LIST_PTR_PTR) C.CK_RV {
-	fmt.Printf("[CALLED]: C_GetFunctionList(ppFunctionList=%s)\n", ppFunctionList)
+	fmt.Printf("[CALLED]: C_GetFunctionList(ppFunctionList=%+v)\n", ppFunctionList)
 
 	if ppFunctionList == nil {
 		fmt.Println(" - ppFunctionList IS NULL")
