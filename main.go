@@ -64,8 +64,22 @@ func C_DecryptInit(hSession C.CK_SESSION_HANDLE, pMechanism C.CK_MECHANISM_PTR, 
 }
 
 //export C_DecryptMessage
+func C_DecryptMessage(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pAssociatedData CK_BYTE_PTR, ulAssociatedDataLen CK_ULONG, pCiphertext CK_BYTE_PTR, ulCiphertextLen CK_ULONG, pPlaintext CK_BYTE_PTR, pulPlaintextLen CK_ULONG_PTR) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_DecryptMessageBegin
+func C_DecryptMessageBegin(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pAssociatedData CK_BYTE_PTR, ulAssociatedDataLen CK_ULONG) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_DecryptMessageNext
+func C_DecryptMessageNext(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pCiphertextPart CK_BYTE_PTR, ulCiphertextPartLen CK_ULONG, pPlaintextPart CK_BYTE_PTR, pulPlaintextPartLen CK_ULONG_PTR, flags CK_FLAGS) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
 
 //export C_DecryptUpdate
 func C_DecryptUpdate(hSession C.CK_SESSION_HANDLE, pEncryptedPart C.CK_BYTE_PTR, ulEncryptedPartLen C.CK_ULONG /*usEncryptedPartLen C.CK_USHORT (v1.0)*/, pPart C.CK_BYTE_PTR, pulPartLen C.CK_ULONG_PTR /*pusPartLen C.CK_USHORT_PTR (v1.0)*/) C.CK_RV { // Since v1.0
@@ -146,8 +160,22 @@ func C_EncryptInit(hSession C.CK_SESSION_HANDLE, pMechanism C.CK_MECHANISM_PTR, 
 }
 
 //export C_EncryptMessage
+func C_EncryptMessage(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pAssociatedData CK_BYTE_PTR, ulAssociatedDataLen CK_ULONG, pPlaintext CK_BYTE_PTR, ulPlaintextLen CK_ULONG, pCiphertext CK_BYTE_PTR, pulCiphertextLen CK_ULONG_PTR) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_EncryptMessageBegin
+func C_EncryptMessageBegin(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pAssociatedData CK_BYTE_PTR, ulAssociatedDataLen CK_ULONG) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_EncryptMessageNext
+func C_EncryptMessageNext(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pPlaintextPart CK_BYTE_PTR, ulPlaintextPartLen CK_ULONG, pCiphertextPart CK_BYTE_PTR, pulCiphertextPartLen CK_ULONG_PTR, flags CK_FLAGS) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
 
 //export C_EncryptUpdate
 func C_EncryptUpdate(hSession C.CK_SESSION_HANDLE, pPart C.CK_BYTE_PTR, ulPartLen C.CK_ULONG /*usPartLen C.CK_USHORT (v1.0)*/, pEncryptedPart C.CK_BYTE_PTR, pulEncryptedPartLen C.CK_ULONG_PTR /*pusEncryptedPartLen C.CK_USHORT_PTR (v1.0)*/) C.CK_RV { // Since v1.0
@@ -230,7 +258,16 @@ func C_GetInfo(pInfo C.CK_INFO_PTR) C.CK_RV { // Since v1.0
 }
 
 //export C_GetInterface
+func C_GetInterface(pInterfaceName CK_UTF8CHAR_PTR, pVersion CK_VERSION_PTR, ppInterface CK_INTERFACE_PTR_PTR, flags CK_FLAGS) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_GetInterfaceList
+func C_GetInterfaceList(pInterfaceList CK_INTERFACE_PTR, pulCount CK_ULONG_PTR) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
 
 //export C_GetMechanismInfo
 func C_GetMechanismInfo(slotID C.CK_SLOT_ID, _type C.CK_MECHANISM_TYPE, pInfo C.CK_MECHANISM_INFO_PTR) C.CK_RV { // Since v1.0
@@ -305,6 +342,10 @@ func C_Login(hSession C.CK_SESSION_HANDLE, userType C.CK_USER_TYPE, pPin C.CK_UT
 }
 
 //export C_LoginUser
+func C_LoginUser(hSession CK_SESSION_HANDLE, userType CK_USER_TYPE, pPin CK_UTF8CHAR_PTR, ulPinLen CK_ULONG, pUsername CK_UTF8CHAR_PTR, ulUsernameLen CK_ULONG) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
 
 //export C_Logout
 func C_Logout(hSession C.CK_SESSION_HANDLE) C.CK_RV { // Since v1.0
@@ -313,13 +354,52 @@ func C_Logout(hSession C.CK_SESSION_HANDLE) C.CK_RV { // Since v1.0
 }
 
 //export C_MessageDecryptFinal
+func C_MessageDecryptFinal(hSession CK_SESSION_HANDLE) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_MessageDecryptInit
+func C_MessageDecryptInit(hSession CK_SESSION_HANDLE, pMechanism CK_MECHANISM_PTR, hKey CK_OBJECT_HANDLE) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_MessageEncryptFinal
+func C_MessageEncryptFinal(hSession  CK_SESSION_HANDLE ) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_MessageEncryptInit
+func C_MessageEncryptInit(hSession CK_SESSION_HANDLE, pMechanism CK_MECHANISM_PTR, hKey CK_OBJECT_HANDLE) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_MessageSignFinal
+func C_MessageSignFinal(hSession CK_SESSION_HANDLE) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_MessageSignInit
+func C_MessageSignInit(hSession CK_SESSION_HANDLE, pMechanism CK_MECHANISM_PTR, hKey CK_OBJECT_HANDLE) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_MessageVerifyFinal
+func C_MessageVerifyFinal(hSession CK_SESSION_HANDLE) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_MessageVerifyInit
+func C_MessageVerifyInit(hSession CK_SESSION_HANDLE, pMechanism CK_MECHANISM_PTR, hKey CK_OBJECT_HANDLE) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
 
 //export C_OpenSession
 func C_OpenSession(slotID C.CK_SLOT_ID, flags C.CK_FLAGS, pApplication C.CK_VOID_PTR, Notify C.CK_NOTIFY /*CK_RV (*Notify)(CK_SESSION_HANDLE hSession, C.CK_NOTIFICATION event, C.CK_VOID_PTR pApplication) (v1.0)*/, phSession C.CK_SESSION_HANDLE_PTR) C.CK_RV { // Since v1.0
@@ -334,6 +414,10 @@ func C_SeedRandom(hSession C.CK_SESSION_HANDLE, pSeed C.CK_BYTE_PTR, ulSeedLen C
 }
 
 //export C_SessionCancel
+func C_SessionCancel(hSessionCK_SESSION_HANDLE, flags CK_FLAGS) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
 
 //export C_SetAttributeValue
 func C_SetAttributeValue(hSession C.CK_SESSION_HANDLE, hObject C.CK_OBJECT_HANDLE, pTemplate C.CK_ATTRIBUTE_PTR, ulCount C.CK_ULONG /*usCount C.CK_USHORT (v1.0)*/) C.CK_RV { // Since v1.0
@@ -378,8 +462,22 @@ func C_SignInit(hSession C.CK_SESSION_HANDLE, pMechanism C.CK_MECHANISM_PTR, hKe
 }
 
 //export C_SignMessage
+func C_SignMessage(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pData CK_BYTE_PTR, ulDataLen CK_ULONG, pSignature CK_BYTE_PTR, pulSignatureLen CK_ULONG_PTR) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_SignMessageBegin
+func C_SignMessageBegin(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_SignMessageNext
+func C_SignMessageNext(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pDataPart CK_BYTE_PTR, ulDataPartLen CK_ULONG, pSignature CK_BYTE_PTR, pulSignatureLen CK_ULONG_PTR) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
 
 //export C_SignRecover
 func C_SignRecover(hSession C.CK_SESSION_HANDLE, pData C.CK_BYTE_PTR, ulDataLen C.CK_ULONG /*usDataLen C.CK_USHORT (v1.0)*/, pSignature C.CK_BYTE_PTR, pulSignatureLen C.CK_ULONG_PTR /*pusSignatureLen C.CK_USHORT_PTR (v1.0)*/) C.CK_RV { // Since v1.0
@@ -424,8 +522,22 @@ func C_VerifyInit(hSession C.CK_SESSION_HANDLE, pMechanism C.CK_MECHANISM_PTR, h
 }
 
 //export C_VerifyMessage
+func C_VerifyMessage(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pData CK_BYTE_PTR, ulDataLen CK_ULONG, pSignature CK_BYTE_PTR, ulSignatureLen CK_ULONG) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_VerifyMessageBegin
+func C_VerifyMessageBegin(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
+
 //export C_VerifyMessageNext
+func C_VerifyMessageNext(hSession CK_SESSION_HANDLE, pParameter CK_VOID_PTR, ulParameterLen CK_ULONG, pDataPart CK_BYTE_PTR, ulDataPartLen CK_ULONG, pSignature CK_BYTE_PTR, ulSignatureLen CK_ULONG) CK_RV { // Since v3.0
+	// TODO
+	return C.CKR_FUNCTION_NOT_SUPPORTED
+}
 
 //export C_VerifyRecover
 func C_VerifyRecover(hSession C.CK_SESSION_HANDLE, pSignature C.CK_BYTE_PTR, ulSignatureLen C.CK_ULONG /*usSignatureLen C.CK_USHORT (v1.0)*/, pData C.CK_BYTE_PTR, pulDataLen C.CK_ULONG_PTR /*pusDataLen C.CK_USHORT_PTR (v1.0)*/) C.CK_RV { // Since v1.0
