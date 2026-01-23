@@ -6,7 +6,7 @@ import "C"
 import "fmt"
 
 var functionList = C.CK_FUNCTION_LIST{
-	C_Initialize: *(*C.CK_C_Initialize)(C.C_Initialize),
+	C_Initialize: (C.CK_C_Initialize)(C.C_Initialize),
 }
 
 func main() {}
