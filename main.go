@@ -6,7 +6,11 @@ import "C"
 import "fmt"
 
 var functionList = C.CK_FUNCTION_LIST{
-	C_Initialize: (C.CK_C_Initialize)(C.C_Initialize),
+	C_Initialize:      (C.CK_C_Initialize)(C.C_Initialize),
+	C_Finalize:        (C.CK_C_Finalize)(C.C_Finalize),
+	C_GetInfo:         (C.CK_C_GetInfo)(C.C_GetInfo),
+	C_GetFunctionList: (C.CK_C_GetFunctionList)(C.C_GetFunctionList),
+	C_GetSlotList:     (C.CK_C_GetSlotList)(C.C_GetSlotList),
 }
 
 func main() {}
