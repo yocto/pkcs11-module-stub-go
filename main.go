@@ -414,7 +414,7 @@ func C_SeedRandom(hSession C.CK_SESSION_HANDLE, pSeed C.CK_BYTE_PTR, ulSeedLen C
 }
 
 //export C_SessionCancel
-func C_SessionCancel(hSessionCK_SESSION_HANDLE, flags C.CK_FLAGS) C.CK_RV { // Since v3.0
+func C_SessionCancel(hSession C.CK_SESSION_HANDLE, flags C.CK_FLAGS) C.CK_RV { // Since v3.0
 	// TODO
 	return C.CKR_FUNCTION_NOT_SUPPORTED
 }

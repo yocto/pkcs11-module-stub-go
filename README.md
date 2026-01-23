@@ -14,7 +14,7 @@ To build this module, you just run:
 
 ```shell
 ./download_headers.sh
-go build -o libmodpkcs11.so
+go build --buildmode=c-shared -o bin/
 ```
 
 Note: Because of Cgo, `gcc` is expected to be installed.
